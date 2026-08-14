@@ -1,0 +1,132 @@
+[
+  {
+    "username": "Rahul",
+    "empCode": "EMP102",
+    "email": "rahul@example.com",
+    "userInfo": {
+      "age": 28,
+      "city": "Jaipur",
+      "department": "Testing"
+    }
+  },
+  {
+    "username": "Priya",
+    "empCode": "EMP103",
+    "email": "priya@example.com",
+    "userInfo": {
+      "age": 26,
+      "city": "Delhi",
+      "department": "Human Resources"
+    }
+  },
+  {
+    "username": "Amit",
+    "empCode": "EMP104",
+    "email": "amit@example.com",
+    "userInfo": {
+      "age": 30,
+      "city": "Mumbai",
+      "department": "Development"
+    }
+  },
+  {
+    "username": "Sneha",
+    "empCode": "EMP105",
+    "email": "sneha@example.com",
+    "userInfo": {
+      "age": 24,
+      "city": "Bangalore",
+      "department": "Design"
+    }
+  },
+  {
+    "username": "Vikas",
+    "empCode": "EMP106",
+    "email": "vikas@example.com",
+    "userInfo": {
+      "age": 32,
+      "city": "Pune",
+      "department": "Finance"
+    }
+  },
+  {
+    "username": "Pulkit Garg",
+    "empCode": "EMP101",
+    "email": "vikas@example.com",
+    "userInfo": {
+      "age": 22,
+      "city": "Leh",
+      "department": "Sports"
+    }
+  },
+  {
+    "username": "Rajesh",
+    "empCode": "EMP107",
+    "email": "rajesh@gmail.com",
+    "userInfo": {
+      "age": 24,
+      "department": "IoT",
+      "city": "Jaipur"
+    }
+  },
+  {
+    "username": "Rahul",
+    "empCode": "EMP107",
+    "email": "rahul@gmail.com",
+    "userInfo": {
+      "age": 28,
+      "department": "IT",
+      "city": "Jaipur"
+    }
+  },
+  {
+    "username": "Rahul",
+    "empCode": "EMP107",
+    "email": "rahul@gmail.com",
+    "userInfo": {
+      "age": 28,
+      "department": "IT",
+      "city": "Jaipur"
+    }
+  },
+  {
+    "username": "Rahul",
+    "empCode": "EMP108",
+    "email": "rahul@gmail.com",
+    "userInfo": {
+      "age": 28,
+      "department": "IT",
+      "city": "Jaipur"
+    }
+  },
+  {
+    "username": "Rahul",
+    "empCode": "EMP109",
+    "email": "rahul@gmail.com",
+    "userInfo": {
+      "age": 28,
+      "department": "IT",
+      "city": "Jaipur"
+    }
+  },
+  {
+    "username": "Rahul",
+    "empCode": "EMP110",
+    "email": "rahul@gmail.com",
+    "userInfo": {
+      "age": 28,
+      "department": "Sports",
+      "city": "Dubai"
+    }
+  },
+  {
+    "username": "Hemant",
+    "empCode": "EMP111",
+    "email": "hemu@gmail.com",
+    "userInfo": {
+      "age": 22,
+      "department": "IoT",
+      "city": "Jaipur"
+    }
+  }
+]
