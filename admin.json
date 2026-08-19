@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Pulkit Garg",
+    "email": "Pulkit@gmail.com",
+    "password": "$2b$10$/2rrJfS3f6qyFxofskDTGeIzXsrJpw69GLDnRfvBU04y6FqzjPso."
+  },
+  {
+    "id": 2,
+    "name": "Pulkit Garg",
+    "email": "Pulkit1@gmail.com",
+    "password": "$2b$10$v8oG.f46f.smTYQ5Ll6Zi.rec0d1yIs6kn1U5vz.WXc8RWB9Cy7PG"
+  }
+]

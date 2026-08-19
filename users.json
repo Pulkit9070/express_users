@@ -100,23 +100,23 @@
     }
   },
   {
-    "username": "Rahul",
-    "empCode": "EMP109",
-    "email": "rahul@gmail.com",
+    "username": "Ustad Ji",
+    "empCode": "EMP112",
+    "email": "badesahab@gmail.com",
     "userInfo": {
-      "age": 28,
-      "department": "IT",
+      "age": 35,
+      "department": "Marketing",
       "city": "Jaipur"
     }
   },
   {
-    "username": "Rahul",
-    "empCode": "EMP110",
-    "email": "rahul@gmail.com",
+    "username": "Roshan",
+    "empCode": "EMP112",
+    "email": "Roshan@gmail.com",
     "userInfo": {
-      "age": 28,
-      "department": "Sports",
-      "city": "Dubai"
+      "age": 35,
+      "department": "Sales",
+      "city": "Jaipur"
     }
   },
   {
@@ -127,6 +127,16 @@
       "age": 22,
       "department": "IoT",
       "city": "Jaipur"
+    }
+  },
+  {
+    "username": "Ritwik Reddy",
+    "empCode": "EMP112",
+    "email": "anna@gmail.com",
+    "userInfo": {
+      "age": 22,
+      "department": "AI",
+      "city": "Gurgaon"
     }
   }
 ]

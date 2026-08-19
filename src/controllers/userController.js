@@ -1,12 +1,12 @@
-const userService = require("../services/userService");
+const userService = require("../services/userServices/userService");
 
 async function getUsers(req, res) {
     try {
-        const { empCode } = req.query;
-        if (empCode) {
-            const user = await userService.getUserByEmpCode(empCode);
-            return res.status(200).json(user);
-        }
+        // const { empCode } = req.query;
+        // if (empCode) {
+        //     const user = await userService.getUserByEmpCode(empCode);
+        //     return res.status(200).json(user);
+        // }
         const responseData = await userService.getAllUsers();
         return res.status(200).json(responseData);
     } catch (error) {
@@ -19,7 +19,7 @@ async function getUsers(req, res) {
 
 async function getUserByEmpCode(req, res) {
     try {
-        const empCode = req.params.empCode;
+        const empCode = req.params.empCode || req.query.username;
         if (!empCode) {
             return res.status(400).json({
                 message: "empCode parameter is required"

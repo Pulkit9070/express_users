@@ -1,5 +1,7 @@
 const express = require("express");
+require("dotenv").config();
 const userRoutes = require("./src/routes/userRoutes");
+const authRoutes = require("./src/routes/authRoutes")
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -12,6 +14,18 @@ app.use((req, res, next) => {
     console.log(`[${req.method}] ${req.url}`);
     next();
 });
+
+// const authenticator = (req,res,next) =>{
+//     const reqBody = req.body;
+//     if(reqBody.username){
+//         console.log("user is authenticated");
+//         next();
+        
+//     }
+//     res.status(401).json({
+//         message: "Unauthorized Errror"
+//     })
+// }
 
 app.get("/", (req, res) => {
     res.status(200).json({
@@ -28,7 +42,7 @@ app.get("/", (req, res) => {
 
 
 app.use("/users", userRoutes);
-
+app.use("/auth", authRoutes)
 
 app.use((req, res, next) => {
     res.status(404).json({
