@@ -10,5 +10,11 @@
     "name": "Pulkit Garg",
     "email": "Pulkit1@gmail.com",
     "password": "$2b$10$v8oG.f46f.smTYQ5Ll6Zi.rec0d1yIs6kn1U5vz.WXc8RWB9Cy7PG"
+  },
+  {
+    "id": 3,
+    "name": "Aman",
+    "email": "Aman@gmail.com",
+    "password": "$2b$10$rwgXdZN68NdOoyUZedrUleZQpzn8uTvMZE9WApU1bBIjrIcWpRVVy"
   }
 ]

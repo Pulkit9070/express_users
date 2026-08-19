@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 
 function generateToken(payload) {
     return jwt.sign(payload, process.env.JWT_SECRET, {
-        expiresIn: "7d"
+        expiresIn: "15m"
     });
 }
 
@@ -32,7 +32,7 @@ function validateToken(req, res, next) {
         req.user = decoded;
 
         next();
-
+ 
     } catch (error) {
         return res.status(401).json({
             message: "Invalid or expired token"
