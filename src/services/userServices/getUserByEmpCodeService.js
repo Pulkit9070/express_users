@@ -1,4 +1,6 @@
-const { readUsersFromFile } = require("./fileService");
+const { where } = require("sequelize");
+const Users = require("../../models/userModel");
+
 
 async function getUserByEmpCode(empCode) {
     if (!empCode) {
@@ -7,11 +9,10 @@ async function getUserByEmpCode(empCode) {
         throw err;
     }
 
-    const users = await readUsersFromFile();
+    const user = await Users.findOne({
+        where:{empCode}
+    })
 
-    const user = users.find(
-        (u) => u.empCode && u.empCode.toLowerCase() === empCode.trim().toLowerCase()
-    );
 
     if (!user) {
         const err = new Error(`User with empCode '${empCode}' not found`);

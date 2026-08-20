@@ -1,15 +1,18 @@
-const myDB = require("./db")
+const myDB = require("./db");
 
-const connectDB = () =>{
+const connectDB = async () => {
     try {
-        myDB.authenticate();
-        console.log("Databse connectwed successfully");
-         
-    } catch (error) {
-        console.log("Connection Failed To Database",error);
-        
-    }
-}
+        await myDB.authenticate();
 
+        console.log("Database connected successfully");
+
+        await myDB.sync();
+
+        console.log("Database synchronized successfully",process.env.DB_Name);
+
+    } catch (error) {
+        console.log("Connection Failed To Database", error);
+    }
+};
 
 module.exports = connectDB;

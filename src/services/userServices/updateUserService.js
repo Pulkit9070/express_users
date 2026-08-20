@@ -1,11 +1,12 @@
-const { readUsersFromFile, writeUsersToFile } = require("./fileService");
+const Users = require("../../models/userModel");
 
 async function updateUser(empCode, updateData) {
-    const users = await readUsersFromFile();
 
-    const existingUser = users.find(
-        (user) => user.empCode && user.empCode.toLowerCase() === empCode.toLowerCase()
-    );
+    const existingUser = await Users.findOne({
+        where: {
+            empCode
+        }
+    });
 
     if (!existingUser) {
         const err = new Error("User not found");
@@ -32,7 +33,8 @@ async function updateUser(empCode, updateData) {
         };
     }
 
-    await writeUsersToFile(users, "Failed to update user");
+    await existingUser.save();
+
     return existingUser;
 }
 

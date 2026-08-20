@@ -1,16 +1,14 @@
-const {readUsersFromFile,writeUsersToFile} = require("./authfileService")
+const { where } = require("sequelize");
+const Admins = require("../../models/adminModel");
 
 const bcrypt = require("bcrypt");
 
 async function registerUser(name,email,password){
 
 
-    const users = await readUsersFromFile();
-   
-
-    const existingUser = users.find(
-        user => user.email.toLowerCase() === email.toLowerCase()
-    );
+    const existingUser = await Admins.findOne({
+        where :{email}
+    })
 
     if(existingUser){
         const error = new Error("Email Already Exists");
@@ -20,17 +18,14 @@ async function registerUser(name,email,password){
 
     const hashedPassword = await bcrypt.hash(password,10);
 
-    const newUser = {
-        id: users.length + 1,
+    const newUser = await Admins.create({
         name,
         email,
         password:hashedPassword
-    }
+    })
 
-    users.push(newUser)
-
-
-    await writeUsersToFile(users);
+    return newUser;
+    // await writeUsersToFile(users);
 }
 
 

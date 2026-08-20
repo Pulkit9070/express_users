@@ -1,15 +1,18 @@
-const {readUsersFromFile,writeUsersToFile} = require("./authfileService");
 const bcrypt = require("bcrypt");
 const { generateToken } = require("../../middlewares/authMiddleware");
+const Admins = require("../../models/adminModel");
+const { where } = require("sequelize");
 
 
 async function loginUser(email,password){
 
-    const users = await readUsersFromFile();
+    // console.log(Admins);
+    
 
-    const existingUser = users.find(
-        user => user.email.toLowerCase() === email.toLowerCase()
-    );
+
+    const existingUser = await Admins.findOne({
+        where:{email}
+    })
 
     if(!existingUser){
         const error = new Error("Please enter valid Credentials");
